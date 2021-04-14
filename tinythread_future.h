@@ -34,7 +34,7 @@ freely, subject to the following restrictions:
 #include <memory>
 #include <stdexcept>
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) && _MSC_VER <= 1800
 namespace std {
 template <typename T>
 typename std::add_rvalue_reference<T>::type declval();
